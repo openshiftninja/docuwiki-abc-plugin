@@ -300,7 +300,7 @@ class syntax_plugin_abc extends DokuWiki_Syntax_Plugin {
         $debugOutput = '';
 
         // create eps file
-        $epsCommand = fullpath($this->getConf('abc2ps'))." $abcFile ".$this->getConf('params4img')." -E -O $fileBase.";
+        $epsCommand = fullpath($this->getConf('abc2ps'))." $abcFile ".$this->getConf('params4img')." -E -O $fileBase";
         passthru($epsCommand." 2>&1");
 
         if($debug) {
